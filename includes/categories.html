@@ -1,0 +1,104 @@
+---
+layout: categories
+permalink: /categories/
+title: Categories
+---
+
+  <!DOCTYPE html>
+  <html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+  <title>AndyWang's Blog</title>
+  <meta name="generator" content="Jekyll v4.2.1" />
+  <meta property="og:title" content="About" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+  <link rel="canonical" href="http://localhost:4000/about/" />
+  <!-- bootstrap@5.1.1 CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <!-- bootstrap@5.1.1 JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  
+  <meta property="og:url" content="http://localhost:4000/about/" />
+  <meta property="og:site_name" content="Your awesome title" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="twitter:title" content="About" />
+  <script type="application/ld+json">
+  {"url":"http://localhost:4000/about/","headline":"About","@type":"WebSite","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","name":"Your awesome title","@context":"https://schema.org"}</script>
+  <!-- End Jekyll SEO tag -->
+  <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Your awesome title" /></head>
+  <body><header class="site-header" role="banner">
+  
+    <div class="wrapper">
+      <a class="site-title" rel="author" href="/">AndyWang's Blog</a>
+      <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-link" role="tab" aria-selected="false" href="/">首頁</a>
+            <a class="nav-link" role="tab" aria-selected="false" href="/includes/postlist/">列表</a>
+            <a class="nav-link active" role="tab" aria-selected="false" href="/categories/">分類</a>
+            <a class="nav-link" role="tab" aria-selected="false" href="/about/">關於我</a>
+          </div>
+        </nav>
+  </div>
+  </header>
+  <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <!-- 分類列表 -->
+        <div id="archives">
+          {% for category in site.categories %}
+            <div class="archive-group">
+              {% capture category_name %}{{ category | first }}{% endcapture %}
+              <div id="#{{ category_name | slugize }}"></div>
+              <p></p>
+          
+              <h3 class="category-head">{{ category_name }}</h3>
+              <a name="{{ category_name | slugize }}"></a>
+              {% for post in site.categories[category_name] %}
+              <article class="archive-item">
+                <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
+              </article>
+              {% endfor %}
+            </div>
+          {% endfor %}
+        </div>
+        <!-- 分類列表 -->
+  
+      </div>
+  </main>
+  <footer class="site-footer h-card">
+    <data class="u-url" href="/"></data>
+  
+    <div class="wrapper">
+  
+      <h2 class="footer-heading">Your awesome title</h2>
+  
+      <div class="footer-col-wrapper">
+        <div class="footer-col footer-col-1">
+          <ul class="contact-list">
+            <li class="p-name">Your awesome title</li><li><a class="u-email" href="mailto:your-email@example.com">your-email@example.com</a></li></ul>
+        </div>
+  
+        <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/jekyll"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jekyll</span></a></li><li><a href="https://www.twitter.com/jekyllrb"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jekyllrb</span></a></li></ul>
+  </div>
+  
+        <div class="footer-col footer-col-3">
+          <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+        </div>
+      </div>
+  
+    </div>
+  
+  </footer>
+  </body>
+  
+  </html>
+  <style>
+      .site-title{
+          float: none;
+      }
+      .nav-tabs{
+          border: none;
+      }
+  </style>
