@@ -17,7 +17,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <!-- bootstrap@5.1.1 JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-  
+  <!-- bootstrap@5.1.1 icon cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
   <meta property="og:url" content="http://localhost:4000/about/" />
   <meta property="og:site_name" content="Your awesome title" />
   <meta name="twitter:card" content="summary" />
@@ -31,8 +32,13 @@
     <div class="wrapper">
       <div class="header">
         <img src="https://avatars.githubusercontent.com/u/71600455?v=4">
-        <a class="site-title" rel="author" href="/">AndyWang's Blog</a>
-        <!-- <a href="https://github.com/AndyWang505"><i class="bi bi-github"></i></a> -->
+        <div>
+          <ul>
+            <li><a class="site-title" rel="author" href="/">AndyWang's Blog</a></li>
+            <li><span><i class="bi bi-geo-alt"> </i>Taiwan , Hsinchu</span></li>
+            <li><a class="header-iconLink" href="https://github.com/AndyWang505" target="_blank"><i class="bi bi-github"></i></a><a class="header-iconLink" href="mailto:andywang890505@gmail.com" target="_blank"><i class="bi bi-envelope"></i></a></li>
+          </ul>
+        </div>
       </div>
       <nav>
           <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -84,9 +90,9 @@
   nav a:hover{
     text-decoration:none;
   }
-  .site-header,footer{
-    background: -webkit-linear-gradient(90deg, #58af87 10%, #d86a9e 90%);
-    background: linear-gradient(90deg, #58af87 10%, #d86a9e 90%);
+  .site-header ,footer{
+    background: -webkit-linear-gradient(90deg, #dab072 10%, #6495bd 90%);
+    background: linear-gradient(90deg, #dab072 10%, #6495bd 90%);
   }
   .li-dropShadow{
     padding: 15px;
@@ -99,13 +105,28 @@
   }
   .header{
     margin: 25px auto 25px auto;
+    display: flex;
+    justify-content: flex-start;
   }
   .header img{
     border-radius:50%;
     max-width: 100px;
   }
-  .site-title{
-    margin-left: 10px;
+  .header ul{
+    margin: auto auto auto 10px;
+  }
+  .header li{
+    margin: auto;
+    list-style: none;
+  }
+  .header span{
+    font-size: 14px;
+  }
+  .header i{
+    color: #000;
+  }
+  .header-iconLink{
+    margin-right: 10px;
   }
       
 </style>

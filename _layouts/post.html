@@ -31,8 +31,13 @@
   <div class="wrapper">
     <div class="header">
       <img src="https://avatars.githubusercontent.com/u/71600455?v=4">
-      <a class="site-title" rel="author" href="/">AndyWang's Blog</a>
-      <!-- <a href="https://github.com/AndyWang505"><i class="bi bi-github"></i></a> -->
+      <div>
+        <ul>
+          <li><a class="site-title" rel="author" href="/">AndyWang's Blog</a></li>
+          <li><span><i class="bi bi-geo-alt"> </i>Taiwan , Hsinchu</span></li>
+          <li><a class="header-iconLink" href="https://github.com/AndyWang505" target="_blank"><i class="bi bi-github"></i></a><a class="header-iconLink" href="mailto:andywang890505@gmail.com" target="_blank"><i class="bi bi-envelope"></i></a></li>
+        </ul>
+      </div>
     </div>
     <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -52,7 +57,7 @@
         <h1 class="post-title">{{ page.title }}</h1>
         <ul class="post-list">
           <li>
-           <span class="post-meta">{{ page.date | date: '%B %d, %Y ' }}</span><span class="post-tags"><i class="bi bi-tags"></i>{{ page.categories }}</span>
+           <span class="post-meta"><i class="bi bi-calendar"> </i>{{ page.date | date: '%B %d, %Y ' }}</span><span class="post-tags"><i class="bi bi-tags"> </i>{{ page.categories }}</span>
           </li>
         </ul>
       </header>
@@ -86,9 +91,9 @@
   nav a:hover{
     text-decoration:none;
   }
-  .site-header,footer{
-    background: -webkit-linear-gradient(90deg, #58af87 10%, #d86a9e 90%);
-    background: linear-gradient(90deg, #58af87 10%, #d86a9e 90%);
+  .site-header ,footer{
+    background: -webkit-linear-gradient(90deg, #dab072 10%, #6495bd 90%);
+    background: linear-gradient(90deg, #dab072 10%, #6495bd 90%);
   }
   .li-dropShadow{
     padding: 15px;
@@ -101,14 +106,30 @@
   }
   .header{
     margin: 25px auto 25px auto;
+    display: flex;
+    justify-content: flex-start;
   }
   .header img{
     border-radius:50%;
     max-width: 100px;
   }
-  .site-title{
-    margin-left: 10px;
+  .header ul{
+    margin: auto auto auto 10px;
   }
+  .header li{
+    margin: auto;
+    list-style: none;
+  }
+  .header span{
+    font-size: 14px;
+  }
+  .header i{
+    color: #000;
+  }
+  .header-iconLink{
+    margin-right: 10px;
+  }
+  /* code style */
   .highlighter-rouge .highlight {
     background: rgb(44, 58, 63);
     border-radius:5px;
@@ -118,9 +139,15 @@
     color: rgb(245, 245, 245);
     border-radius:5px;
   }
+  /* tags style */
   .post-tags{
     font-size: 14px;
     color: #c98116;
+    margin: auto 5px auto 5px;
+  }
+  /* hr */
+  .post-content hr{
+    margin: 25px auto 25px auto;
   }
       
 </style>
