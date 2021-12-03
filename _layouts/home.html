@@ -53,7 +53,7 @@
         <ul class="post-list">
             {% for post in site.posts %}
             <li class="li-dropShadow">
-                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                <span class="post-meta">{{ post.date | date: "%b %-d, %Y " }}</span><span class="post-tags"><i class="bi bi-tags"></i>{{ post.categories }}</span>
 
                 <h2>
                 <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
@@ -66,7 +66,7 @@
 </main>
 <footer class="site-footer h-card">
   <div class="wrapper">
-    <p>&copy; 2021 AndyWang505</p>
+    <p>Copyright &copy; 2021 AndyWang505</p>
   </div>
 </footer>
 </body>
@@ -107,6 +107,10 @@
   }
   .site-title{
     margin-left: 10px;
+  }
+  .post-tags{
+    font-size: 14px;
+    color: #c98116;
   }
   
 </style>

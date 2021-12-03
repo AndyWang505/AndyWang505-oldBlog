@@ -16,6 +16,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 <!-- bootstrap@5.1.1 JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
 
 <meta property="og:url" content="http://localhost:4000/about/" />
 <meta property="og:site_name" content="Your awesome title" />
@@ -51,7 +52,7 @@
         <h1 class="post-title">{{ page.title }}</h1>
         <ul class="post-list">
           <li>
-           <span class="post-meta">{{ page.date | date: '%B %d, %Y' }}</span>
+           <span class="post-meta">{{ page.date | date: '%B %d, %Y ' }}</span><span class="post-tags"><i class="bi bi-tags"></i>{{ page.categories }}</span>
           </li>
         </ul>
       </header>
@@ -67,7 +68,7 @@
 
 <footer class="site-footer h-card">
   <div class="wrapper">
-    <p>&copy; 2021 AndyWang505</p>
+    <p>Copyright &copy; 2021 AndyWang505</p>
   </div>
 </footer>
 </body>
@@ -116,6 +117,10 @@
     background: rgb(44, 58, 63);
     color: rgb(245, 245, 245);
     border-radius:5px;
+  }
+  .post-tags{
+    font-size: 14px;
+    color: #c98116;
   }
       
 </style>
