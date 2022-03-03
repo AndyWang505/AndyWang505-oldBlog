@@ -1,5 +1,5 @@
 # The Site Configuration
-title: AndyWang505
+
 # Import the theme
 theme: jekyll-theme-chirpy
 
@@ -16,17 +16,17 @@ lang: en
 prefer_datetime_locale:
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone: Asia/Shanghai
+timezone: Asia/Taipei
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: AndyWang505                    # the main title
+title: AndyWang | Blog                    # the main title
 
-tagline: AndyWang's Blog - 這裡是我的小宇宙   # it will display as the sub-title
+tagline: AndyWang505 - 這裡是我的小宇宙   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
+  hello~ my nickname is weiwei.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://andywang505.github.io/'
